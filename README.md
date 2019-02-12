@@ -1,5 +1,5 @@
 # log4j.properties
-log4j.properties配置文件
+log4j.properties配置文件使用介绍及示例
 
 ---
 ### 一、log4j.properties 的使用详解
