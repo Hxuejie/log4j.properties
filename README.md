@@ -2,15 +2,15 @@
 log4j.properties配置文件
 
 ---
-###一、log4j.properties 的使用详解
-######1.输出级别的种类  
+### 一、log4j.properties 的使用详解
+###### 1.输出级别的种类  
 ERROR、WARN、INFO、DEBUG  
 ERROR 为严重错误 主要是程序的错误  
 WARN 为一般警告，比如session丢失  
 INFO 为一般要显示的信息，比如登录登出  
 DEBUG 为程序的调试信息  
 
-######2.配置日志信息输出目的地  
+###### 2.配置日志信息输出目的地  
 log4j.appender.appenderName = fully.qualified.name.of.appender.class  
 1. org.apache.log4j.ConsoleAppender（控制台）  
 2. org.apache.log4j.FileAppender（文件）  
@@ -18,14 +18,14 @@ log4j.appender.appenderName = fully.qualified.name.of.appender.class
 4. org.apache.log4j.RollingFileAppender（文件大小到达指定尺寸的时候产生一个新的文件）  
 5. org.apache.log4j.WriterAppender（将日志信息以流格式发送到任意指定的地方）  
 
-######3.配置日志信息的格式  
+###### 3.配置日志信息的格式  
 log4j.appender.appenderName.layout = fully.qualified.name.of.layout.class  
 1. org.apache.log4j.HTMLLayout（以HTML表格形式布局）  
 2. org.apache.log4j.PatternLayout（可以灵活地指定布局模式）  
 3. org.apache.log4j.SimpleLayout（包含日志信息的级别和信息字符串）  
 4. org.apache.log4j.TTCCLayout（包含日志产生的时间、线程、类别等等信息）  
 
-######4.控制台选项
+###### 4.控制台选项
 Threshold=DEBUG:指定日志消息的输出最低层次。  
 ImmediateFlush=true:默认值是true,意谓着所有的消息都会被立即输出。  
 Target=System.err：默认情况下是：System.out,指定输出控制台  
@@ -43,7 +43,7 @@ MaxFileSize=100KB: 后缀可以是KB, MB 或者是 GB. 在日志文件到达该�
 MaxBackupIndex=2:指定可以产生的滚动文件的最大数。  
 log4j.appender.A1.layout.ConversionPattern=%-4r %-5p %d{yyyy-MM-dd HH:mm:ssS} %c %m%n  
 
-######5.日志信息格式中几个符号所代表的含义：  
+###### 5.日志信息格式中几个符号所代表的含义：  
  -X号: X信息输出时左对齐；  
  %p: 输出日志信息优先级，即DEBUG，INFO，WARN，ERROR，FATAL  
  %d: 输出日志时间点的日期或时间，默认格式为ISO8601，也可以在其后指定格式，比如：%d{yyy MMM dd HH:mm:ss,SSS}，输出类似：2002年10月18日 22：10：28，921  
@@ -65,15 +65,15 @@ log4j.appender.A1.layout.ConversionPattern=%-4r %-5p %d{yyyy-MM-dd HH:mm:ssS} %c
  3)   %.30c:指定输出category的名称，最大的宽度是30，如果category的名称大于30的话，就会将左边多出的字符截掉，但小于30的话也不会有空格。  
  4)   %20.30c:如果category的名称小于20就补空格，并且右对齐，如果其名称长于30字符，就从左边较远输出的字符截掉。  
 
-###二、log4j.properties的配置
-######1、配置步骤  
+### 二、log4j.properties的配置
+###### 1、配置步骤  
 
 　　1）  在应用程序中使用log4j  
 　　2)     把log4j-*.*jar放入CLASSPATH变量中  
 　　3)     新建一个配置文件log4j.properties，放于bin文件下  
 　　　　
 
-######2.新建一个配置文件log4j.properties，如：
+###### 2.新建一个配置文件log4j.properties，如：
 
 　　log4j.rootLogger=WARN, stdout, R  
 　　log4j.appender.stdout=org.apache.log4j.ConsoleAppender  
