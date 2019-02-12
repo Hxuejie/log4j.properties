@@ -66,14 +66,14 @@ log4j.appender.A1.layout.ConversionPattern=%-4r %-5p %d{yyyy-MM-dd HH:mm:ssS} %c
  4)   %20.30c:如果category的名称小于20就补空格，并且右对齐，如果其名称长于30字符，就从左边较远输出的字符截掉。  
 
 ### 二、log4j.properties的配置
-###### 1、配置步骤  
+###### 1. 配置步骤  
 
 　　1）  在应用程序中使用log4j  
-　　2)     把log4j-*.*jar放入CLASSPATH变量中  
-　　3)     新建一个配置文件log4j.properties，放于bin文件下  
+　　2)   把log4j-*.*jar放入CLASSPATH变量中  
+　　3)   新建一个配置文件log4j.properties，放于bin文件下  
 　　　　
 
-###### 2.新建一个配置文件log4j.properties，如：
+###### 2. 新建一个配置文件log4j.properties，如：
 
 　　log4j.rootLogger=WARN, stdout, R  
 　　log4j.appender.stdout=org.apache.log4j.ConsoleAppender  
